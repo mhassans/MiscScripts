@@ -20,10 +20,10 @@ For those using Tmux, this file makes your Tmux screen visually nicer. I found t
 This is for those using Vim editor. You need to create the ```~/.vim/undodir``` directory by hand. Some explanations are added in the file.
 
 ### bashrc
-These lines are useful for Tmux users. When an ssh connection is lost, you would need to reconnect and reattach your Tmux screen. But you would find a display error when trying to, for example, show a plot. Tmux users can add these lines to their bashrc so that before every command, DISPLAY variable is exported. 
+These lines are useful for Tmux users. When an ssh connection is lost, you would need to reconnect and reattach your Tmux screen. But you would find a display error when trying to, for example, show a plot. Tmux users can add these lines to their bashrc so that before every command, the DISPLAY variable is exported. 
 
 Otherwise, (if you are not lazy) you can forget about these lines and simply run
 ```
 export $(tmux show-environment | grep "^DISPLAY")
 ```
-when reattaching your Tmux screen (or add an alias for this command to make it easier).
+when reattaching your Tmux screen to export this variable. You can also add this as an alias to your bashrc to make it easier.
